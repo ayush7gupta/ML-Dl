@@ -41,7 +41,7 @@ def convertStringtoInt(dataset, column):
         if row[column] == 'M':
             row[column] = 1
         else:
-            row[column] =0
+            row[column] = 0
         #print(row[column])
         #i= i+1
 
@@ -52,11 +52,13 @@ def trainPerceptron(data_train, data_test, result_train, result_test, learning_r
     #Here we are training the network
     for i in range (epoch):
         number = random.randint(0, 168)
+        #dot product is not possible in 1d arrays in matlab and numpy, so have to reshape it to a 2-d array
         weight = weight.reshape(-1,1)
         #print(type((weight)))
         #print(weight.shape)
         #print(data_train[number].shape)
         test_entity = data_train[number]
+        #one array has to be transpose of other for successfull dot product, notice a subtle differences in 1 and -1
         test_entity = test_entity.reshape(1,-1)
         #print(type(test_entity))
         #print(test_entity.shape)
@@ -64,6 +66,7 @@ def trainPerceptron(data_train, data_test, result_train, result_test, learning_r
         print(val)
         print(result_train[number])
 
+        #now we will check for how many are we getting the negative result. If we get negative result we will update our weights
         if(val < 0 and result_train[number] == 1):
             #print((test_entity.T).shape)
             weight = weight + learning_rate * (test_entity.T)
@@ -86,6 +89,7 @@ def trainPerceptron(data_train, data_test, result_train, result_test, learning_r
         if(val < 0 and result_test[i] == 0):
             count = count + 1
     print(count)
+    print((count/len(result_test))*100)
 
 
 data = getcsv_to_list('SonarData.csv')
@@ -125,6 +129,7 @@ result_test = test[:,-1]
 
 #print(data_test.shape)
 #print(result_test.shape)
+# This is our baap function which is controlling the whole perceptron
 trainPerceptron(data_train, data_test, result_train, result_test, 1, 500000 )
 
 
