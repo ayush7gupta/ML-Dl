@@ -137,26 +137,30 @@ def GradientDescent(x, y, theta, alpha, iteration):
         j.append(total_cost)
         m = len(y)
         h_x = np.dot(x, theta)
-        if(total_cost < 0.1):
+        if(total_cost < 0.01):
             break
         theta[1] = theta[1] + alpha/m *(np.sum( np.dot(x[:,1].T, y-h_x)))
         theta[0] = theta[0] + alpha/m *(np.sum(y - h_x))
         #print(np.sum(y-h_x),theta[0], theta[1])
-        print(np.sum(np.dot(x[:,1].T, y)), theta[0], theta[1])
+        #print(np.sum(np.dot(x[:,1].T, y)), theta[0], theta[1])
     return theta, j
 
 
 
 theta = np.zeros((2,1))
-iteration = 1000000
-alpha = 0.001
+iteration = 10000000
+alpha = 0.0001
 
 
 theta, cost = GradientDescent(x, y, theta, alpha, iteration)
 print('Theta found by Gradient Descent: intercept = {} and slope {}'.format(theta[0], theta[1]))
-print(j)
+#print(j)
 
-
+plt.figure(figsize=(10,6))
+plt.title('$\\theta_0$ = {} , $\\theta_1$ = {}'.format(theta[0], theta[1]))
+plt.scatter(x[:,1],y, marker='x', color='g')
+plt.plot(x[:,1], np.dot(x, theta), 'r')
+plt.show()
 #just for sake of learning the below code is added
 '''
 #Regression using the libraries
