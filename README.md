@@ -1,2 +1,5 @@
-# Deep-Learning-again
-Doing some basic as well as already done codes for deep Learning
+# Machine Learning/ Deep Learning
+Making some basic as well as advanced model
+
+The project list at current point of time includes:
+1. Basic perceptron Algorithm
