@@ -14,6 +14,15 @@ import os
 import warnings;
 warnings.filterwarnings('ignore')
 
+
+#the lines before wget got the code to work after struggling for 2 days due to dependencies
+from tensorflow.compat.v1 import ConfigProto
+from tensorflow.compat.v1 import InteractiveSession
+
+config = ConfigProto()
+config.gpu_options.allow_growth = True
+session = InteractiveSession(config=config)
+
 import wget
 
 # download dataset
@@ -104,7 +113,7 @@ early_stopper = EarlyStopping(monitor='val_loss', min_delta=0.0001, patience=4, 
 
 a_e = autoencoder.fit(train_x_px, train_x,
             epochs=50,
-            batch_size=256,
+            batch_size=128,
             shuffle=True,
             validation_data=(val_x_px, val_x),
             callbacks=[early_stopper])
