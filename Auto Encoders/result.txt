@@ -1,0 +1,35 @@
+Following are the result obtained by running the algo.
+11248/11248 [==============================] - 70s 6ms/sample - loss: 0.0553 - val_loss: 0.0068
+Epoch 2/50
+11248/11248 [==============================] - 59s 5ms/sample - loss: 0.0048 - val_loss: 0.0039
+Epoch 3/50
+11248/11248 [==============================] - 61s 5ms/sample - loss: 0.0035 - val_loss: 0.0031
+Epoch 4/50
+11248/11248 [==============================] - 61s 5ms/sample - loss: 0.0031 - val_loss: 0.0029
+Epoch 5/50
+11248/11248 [==============================] - 61s 5ms/sample - loss: 0.0029 - val_loss: 0.0028
+Epoch 6/50
+11248/11248 [==============================] - 61s 5ms/sample - loss: 0.0029 - val_loss: 0.0028
+Epoch 7/50
+11248/11248 [==============================] - 61s 5ms/sample - loss: 0.0027 - val_loss: 0.0028
+Epoch 8/50
+11248/11248 [==============================] - 61s 5ms/sample - loss: 0.0027 - val_loss: 0.0027
+Epoch 9/50
+11248/11248 [==============================] - 61s 5ms/sample - loss: 0.0027 - val_loss: 0.0026
+Epoch 10/50
+11248/11248 [==============================] - 61s 5ms/sample - loss: 0.0026 - val_loss: 0.0026
+Epoch 11/50
+11248/11248 [==============================] - 61s 5ms/sample - loss: 0.0026 - val_loss: 0.0025
+Epoch 12/50
+11248/11248 [==============================] - 61s 5ms/sample - loss: 0.0026 - val_loss: 0.0025
+Epoch 13/50
+11248/11248 [==============================] - 64s 6ms/sample - loss: 0.0026 - val_loss: 0.0025
+Epoch 14/50
+11248/11248 [==============================] - 60s 5ms/sample - loss: 0.0025 - val_loss: 0.0025
+Epoch 15/50
+11248/11248 [==============================] - 60s 5ms/sample - loss: 0.0025 - val_loss: 0.0026
+Epoch 00015: early stopping
+
+Results can be seen in result.png.
+Upper row is the input image
+lower row is output image after training
