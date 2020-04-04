@@ -1,0 +1,1 @@
+This code is written in python2. This is is older code written in 2017. use CIFA10-python dataset along with this.
