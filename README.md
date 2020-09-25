@@ -11,3 +11,6 @@ The project list at current point of time includes:
 7. PCA on some unknown dataset
 8. Random Forest on Titanic Dataset
 9. SVM on iris dataset
+10. CNN using Tensorflow(college project)
+11. K-means clustering
+12. Hidden markov model
